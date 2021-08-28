@@ -1,32 +1,37 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
 <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-<h2>Créer un compte</h2>    
-<form [formGroup]="signupForm" (ngSubmit)="onCreate()">
+    <div style="padding-top: 30px; padding-left:900px;" class="col-sm-8 col-sm-offset-2">
+<h2 class="display-5" style="padding-left:110px ; font-family: 'Roboto', sans-serif; color: #134e6f;" >Créer un compte</h2>   
+<br> 
+<form class="row row-cols-1" [formGroup]="signupForm" (ngSubmit)="onCreate()">
+    <fieldset class="border p-5">
     <div class="form-group">
-        <label for="nom">Nom : </label>
+        <label style="font-size:25px;" for="nom">Nom : </label>
         <div class="col-sm-4">
 
-        <input type="text" id="nom" class="form-control" formControlName="nom">
+        <input  type="text" id="nom" class="form-control" formControlName="nom">
         </div>
     </div>
     <br>
     <div class="form-group">
-        <label for="prenom">Prénom :</label>
-        <div class="col-sm-4">
+        <label style="font-size:25px;" for="prenom">Prénom :</label>
+        <div class="col-sm-5">
             <input type="text" id="prenom" class="form-control" formControlName="prenom" >
         </div>
     </div>
     <br>
 
     <div class="form-group">
-        <label for="dateNaiss">Date de naissance :</label>
-        <div class="col-sm-4">
+        <label style="font-size:25px;" for="dateNaiss">Date de naissance :</label>
+        <div class="col-sm-5">
         <input type="date" id="dateNaiss"  class="form-control" formControlName="dateNaiss">
     </div>
 </div>
 <br>
 <div class="form-group">
-    <label for="sexe">Sexe :</label>
+    <label style="font-size:25px;" for="sexe">Sexe :</label>
     <br>
     <div class="form-check-inline">
         <label class="form-check-label" for="radio1" >
@@ -49,9 +54,9 @@
 
 <div class="form-group">
 <div class="dropdown">
-    <label for="niveau">Votre niveau d'étude :</label>
+    <label style="font-size:25px;" for="niveau">Votre niveau d'étude :</label>
 
-    <div class="col-sm-4">
+    <div class="col-sm-5">
     <select class="selectpicker" class="form-control" id="niveau" name="niveau" formControlName="niveau">
         <option>Bac</option>
         <option>Licence</option>
@@ -63,30 +68,34 @@
 </div>
 <br>
     <div class="form-group">
-        <label for="speacialite">Spécialité :</label>
-        <div class="col-sm-4">
+        <label style="font-size:25px;" for="speacialite">Spécialité :</label>
+        <div class="col-sm-5">
             <input type="text" id="speacialite" class="form-control" formControlName="speacialite">
         </div> 
     </div>
     <br>
     <div class="form-group">
-        <label for="email">Adresse mail :</label>
-        <div class="col-sm-4">
+        <label style="font-size:25px;" for="email">Adresse mail :</label>
+        <div class="col-sm-5">
             <input type="text" id="email" class="form-control" formControlName="email">
         </div> 
     </div>
     <br>
     <div class="form-group">
-        <label for="password">Mot de Passe :</label>
-        <div class="col-sm-4">
+        <label style="font-size:25px;" for="password">Mot de Passe :</label>
+        <div class="col-sm-5">
             <input type="password" id="password" class="form-control" formControlName="password">
         </div>
     </div>
     <br>
     <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid">Créer compte</button>
+</fieldset>
 </form>
 <br>
 <p class="text-danger"> {{errorMessage}}</p>
 </div>
 </div>
 
+
+
+  
